@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:39:45 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/03 22:15:04 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 22:50:14 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int	main(int argc, char **argv)
 	game->map->map_matrix = (read_map(game->map->fd));
 	if (game->map->fd < 0 || game->map->map_matrix == NULL)
 	{
-		ft_printf("Invalid map!\n");
+		ft_printf("Error\nInvalid map!\n");
 		free_main(game);
 	}
 	dimensions(game->map);
