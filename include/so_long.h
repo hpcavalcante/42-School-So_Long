@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:34:14 by hepiment          #+#    #+#             */
-/*   Updated: 2022/08/29 17:39:29 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 21:13:23 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,10 @@ void	free_matrix(t_game *game);
 char	*ft_itoa(int n);
 void	player_render(t_game *game);
 void	open_image(t_game *game);
-void	colision(int x,int y,t_game *game);
+void	colision(int x, int y, t_game *game);
 void	init_var(t_game *game);
 void	init_struct(t_game *game);
-void 	free_main(t_game *game);
+void	free_main(t_game *game);
 void	free_tr(t_game *game);
 
 # define IVLCHAR "Error!\nInvalid character on map.\n"

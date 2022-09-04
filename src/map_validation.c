@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 23:38:55 by hepiment          #+#    #+#             */
-/*   Updated: 2022/08/17 14:03:16 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 21:10:03 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int	count_char_print(t_map *map)
 		ft_printf(EERROR);
 		return (0);
 	}
+	return (1);
 }
 
 void	count_char(t_map *map)
@@ -115,14 +116,14 @@ int	invalid_character(t_map *map)
 
 int	map_validation(t_map *map)
 {
-	if(!map_is_rectangular(map))
+	if (!map_is_rectangular(map))
 		return (0);
-	if(!walls(map))
+	if (!walls(map))
 		return (0);
 	count_char(map);
-	if(!count_char_print(map))
+	if (!count_char_print(map))
 		return (0);
-	if(!invalid_character(map))
+	if (!invalid_character(map))
 		return (0);
 	return (1);
 }

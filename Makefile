@@ -6,13 +6,13 @@
 #    By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/17 12:09:18 by gissao-m          #+#    #+#              #
-#    Updated: 2022/08/27 23:37:02 by hepiment         ###   ########.fr        #
+#    Updated: 2022/09/03 21:04:04 by hepiment         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
-CC = gcc
+CC = clang
 INCLUDE = -I ./include/
 CFLAGS = -g $(INCLUDE)
 MLXFLAGS = -lmlx -Ilmlx -lXext -lX11

@@ -6,13 +6,13 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 19:02:50 by hepiment          #+#    #+#             */
-/*   Updated: 2022/08/28 00:01:21 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 21:11:20 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void free_main(t_game *game)
+void	free_main(t_game *game)
 {
 	free(game->map);
 	free(game);
@@ -32,7 +32,7 @@ void	free_matrix(t_game *game)
 	free(game->map->map_matrix);
 }
 
-void destroy(t_game *game)
+void	destroy(t_game *game)
 {
 	mlx_destroy_image(game->mlx, game->player->image);
 	mlx_destroy_image(game->mlx, game->collect->image);
@@ -58,7 +58,7 @@ void	free_tr(t_game *game)
 	free(game);
 }
 
-int kill_window(t_game *game)
+int	kill_window(t_game *game)
 {
 	destroy(game);
 	free_tr(game);

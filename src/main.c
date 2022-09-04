@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:39:45 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/02 13:35:10 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 21:12:26 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	**read_map(int fd)
 	{
 		if (map.buffer[0] == '\n')
 		{
-			while(map.buffer)
+			while (map.buffer)
 			{
 				free(map.buffer);
 				map.buffer = get_next_line(fd);
@@ -90,7 +90,7 @@ void	run(t_game *game)
 int	main(int argc, char **argv)
 {
 	t_game		*game;
-	
+
 	if (argc != 2 || !check_extension(argv[1], ".ber"))
 	{
 		ft_printf(IVLEXT);
