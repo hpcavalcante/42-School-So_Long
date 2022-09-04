@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:00:54 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/04 03:49:06 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 03:59:57 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,13 @@ void	colision(int x, int y, t_game *game)
 
 int	check_colision(int x, int y, t_game *game)
 {
-	if (game->map->map_matrix[y][x] == '1')
-		return (0);
+	if (game->map->map_matrix[y][x] == '0')
+		return (1);
 	if (game->map->map_matrix[y][x] == 'C')
+	{
 		game->map->count_c--;
+		return (1);
+	}
 	if (game->map->map_matrix[y][x] == 'E')
 	{
 		if (game->map->count_c == 0)
@@ -62,5 +65,5 @@ int	check_colision(int x, int y, t_game *game)
 		ft_printf("You need to collect all before exit\n");
 		return (0);
 	}
-	return (1);
+	return (0);
 }

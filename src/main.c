@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:39:45 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/04 03:49:18 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 04:00:30 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,9 @@ void	run(t_game *game)
 			game->map->y * TILES, "Demon Cleaner");
 	open_image(game);
 	map_render(game);
-	mlx_key_hook(game->mlx_win, key_hook, game);
 	mlx_hook(game->mlx_win, 17, 0L, kill_window, (void *)game);
 	mlx_loop_hook(game->mlx, refresh, game);
+	mlx_key_hook(game->mlx_win, key_hook, game);
 	mlx_loop(game->mlx);
 }
 
@@ -111,6 +111,5 @@ int	main(int argc, char **argv)
 		free_main(game);
 	}
 	init_struct(game);
-	ft_printf("Moves: %d", game->map->moves);
 	run(game);
 }
