@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:39:45 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/03 21:53:22 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 22:15:04 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	**read_map(int fd)
 		return (NULL);
 	map.read_line = ft_strdup("");
 	map.buffer = get_next_line(fd);
-	while (map.buffer)
+	while (map.buffer != 0)
 	{
 		if (map.buffer[0] == '\n')
 		{
