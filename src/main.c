@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:39:45 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/04 03:40:47 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 03:49:18 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,6 @@ int	main(int argc, char **argv)
 		free_main(game);
 	}
 	init_struct(game);
+	ft_printf("Moves: %d", game->map->moves);
 	run(game);
 }
