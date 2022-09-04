@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 23:38:55 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/03 21:10:03 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 21:33:52 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	walls(t_map *map)
 {
-	size_t	i;
+	int	i;
 
 	i = -1;
 	while (map->map_matrix[++i])

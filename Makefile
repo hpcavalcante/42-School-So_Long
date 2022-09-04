@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/17 12:09:18 by gissao-m          #+#    #+#              #
-#    Updated: 2022/09/03 21:22:27 by hepiment         ###   ########.fr        #
+#    Created: 2022/09/03 21:29:22 by hepiment          #+#    #+#              #
+#    Updated: 2022/09/03 21:31:35 by hepiment         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
-CC = clang
+CC = cc
 INCLUDE = -I ./include/
-CFLAGS = -g $(INCLUDE)
+CFLAGS = -g $(INCLUDE) -Wall -Wextra -Werror
 MLXFLAGS = -lmlx -Ilmlx -lXext -lX11
 
 

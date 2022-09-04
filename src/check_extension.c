@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:53:10 by hepiment          #+#    #+#             */
-/*   Updated: 2022/08/17 14:05:20 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/03 21:32:34 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	map_is_rectangular(t_map *map)
 	i = -1;
 	while (map->map_matrix[++i])
 	{
-		if (ft_strlen(map->map_matrix[i]) != map->x)
+		if ((int) ft_strlen(map->map_matrix[i]) != map->x)
 		{
 			ft_printf(RERROR);
 			return (0);
