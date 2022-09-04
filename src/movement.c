@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:00:54 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/03 21:08:17 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 03:47:17 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	key_hook(int keycode, t_game *game)
 	int	x;
 	int	y;
 
+	ft_printf("Moves: %d", game->map->moves);
 	x = game->map->psc_x;
 	y = game->map->psc_y;
 	if (keycode == ESC)
