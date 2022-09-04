@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:34:14 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/03 21:13:23 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 03:36:06 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ typedef struct s_game
 
 char	**ft_split(char const *s, char c);
 char	*ft_strdup(const char *src);
-char	**read_map(int fd);
+char	**read_map(int fd, t_game *game);
 int		map_is_rectangular(t_map *map);
 int		check_extension(char *path, char *extension);
 int		walls(t_map *map);

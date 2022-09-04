@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:39:45 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/03 22:50:14 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 03:40:47 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,33 +27,32 @@ void	dimensions(t_map *map)
 	map->x = col;
 }
 
-char	**read_map(int fd)
+char	**read_map(int fd, t_game *game)
 {
-	t_map	map;
-
-	if (fd < 0)
+	game->map->buffer = get_next_line(fd);
+	if (game->map->buffer == NULL)
 		return (NULL);
-	map.read_line = ft_strdup("");
-	map.buffer = get_next_line(fd);
-	while (map.buffer != 0)
+	game->map->read_line = ft_strdup("");
+	while (game->map->buffer != 0)
 	{
-		if (map.buffer[0] == '\n')
+		if (game->map->buffer[0] == '\n')
 		{
-			while (map.buffer)
+			while (game->map->buffer)
 			{
-				free(map.buffer);
-				map.buffer = get_next_line(fd);
+				free(game->map->buffer);
+				game->map->buffer = get_next_line(fd);
 			}	
-			free(map.read_line);
+			free(game->map->read_line);
 			return (NULL);
 		}
-		map.read_line = ft_strjoin(map.read_line, map.buffer);
-		free(map.buffer);
-		map.buffer = get_next_line(fd);
+		game->map->read_line = ft_strjoin(game->map->read_line, \
+		game->map->buffer);
+		free(game->map->buffer);
+		game->map->buffer = get_next_line(fd);
 	}
-	map.map_matrix = ft_split(map.read_line, '\n');
-	free(map.read_line);
-	return (map.map_matrix);
+	game->map->map_matrix = ft_split(game->map->read_line, '\n');
+	free(game->map->read_line);
+	return (game->map->map_matrix);
 }
 
 int	refresh(t_game *game)
@@ -99,7 +98,7 @@ int	main(int argc, char **argv)
 	game = malloc(sizeof(t_game));
 	init_var(game);
 	game->map->fd = open(argv[1], O_RDONLY);
-	game->map->map_matrix = (read_map(game->map->fd));
+	game->map->map_matrix = (read_map(game->map->fd, game));
 	if (game->map->fd < 0 || game->map->map_matrix == NULL)
 	{
 		ft_printf("Error\nInvalid map!\n");
