@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 19:11:04 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/03 21:11:54 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 04:19:04 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	render_image(t_imagedata *image, t_game *game, int i, int j)
 {
 	mlx_put_image_to_window(game->mlx, game->mlx_win, image->image, \
 	i * TILES, j * TILES);
+	mov_count(game);
 }
 
 void	open_image(t_game *game)

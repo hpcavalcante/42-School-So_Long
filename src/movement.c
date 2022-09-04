@@ -6,11 +6,23 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:00:54 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/04 03:59:57 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 04:17:44 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
+
+void	mov_count(t_game *game)
+{
+	char	*buffer;
+	char	*temp;
+
+	temp = ft_itoa(game->map->moves);
+	buffer = ft_strjoin(ft_strdup("Moves: "), temp);
+	mlx_string_put(game->mlx, game->mlx_win, 10, 15, 0xffffff, buffer);
+	free(buffer);
+	free(temp);
+}
 
 int	key_hook(int keycode, t_game *game)
 {

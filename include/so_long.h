@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:34:14 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/04 03:36:06 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/04 04:19:22 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ typedef struct s_game
 	float		reset;
 }	t_game;
 
+void	mov_count(t_game *game);
 char	**ft_split(char const *s, char c);
 char	*ft_strdup(const char *src);
 char	**read_map(int fd, t_game *game);
