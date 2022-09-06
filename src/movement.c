@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:00:54 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/04 04:17:44 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/05 21:28:38 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int	key_hook(int keycode, t_game *game)
 		y++;
 	if (keycode == D)
 		x++;
-	if (check_colision(x, y, game))
+	if ((keycode == W || keycode == A || keycode == S || keycode == D) \
+	&& check_colision(x, y, game))
 	{
 		colision(x, y, game);
 		ft_printf("\e[1;1H\e[2JMoves: %d\n", game->map->moves);
